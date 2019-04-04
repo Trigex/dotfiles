@@ -31,11 +31,11 @@
 	spacing: 0;
 	background-color: transparent;
 
-	font: "Roboto Mono 13";
+	font: "Operator Mono 16";
 }
 
 window {
-	transparency: "real";
+	/*transparency: "real";*/
 	/*fullscreen: true;*/
 	background-color: #263238CC; /*base00 + CC (80% opacity)*/
 }
@@ -130,3 +130,4 @@ element normal urgent, element selected urgent, element alternate urgent {
 element normal active, element selected active, element alternate active {
 	text-color: @base0B;
 }
+
