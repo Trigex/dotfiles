@@ -35,7 +35,7 @@ command=/home/trigex/.scripts/mediaplayer
 instance=mpd
 interval=5
 signal=10
-color=#1de9b6
+color=#a36ac7
 separator=false
 
 # Volume indicator
@@ -49,7 +49,7 @@ instance=Master
 #instance=PCM
 interval=1
 #signal=10
-color=#f9a825
+color=#3971ed
 separator=false
 
 # Memory usage
@@ -59,14 +59,7 @@ separator=false
 label=
 separator=false
 interval=30
-color=#b2ebf2
-
-[memory]
-label=
-instance=swap
-separator=false
-interval=30
-color=#80deea
+color=#cc342b
 
 # Disk usage
 #
@@ -78,7 +71,7 @@ label=
 #instance=/mnt/data
 interval=30
 separator=false
-color=#ff6f00
+color=#198844
 
 # Network interface monitoring
 #
@@ -93,7 +86,7 @@ color=#ff6f00
 label=
 interval=5
 separator=false
-color=#ffeb3b
+color=#fba922
 #[load_average]
 #interval=10
 # Date Time
@@ -102,6 +95,7 @@ color=#ffeb3b
 label=
 command=date '+%I:%M %p'
 interval=5
+color=#ffffff
 
 # Generic media player support
 #
