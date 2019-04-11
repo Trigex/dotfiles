@@ -93,21 +93,14 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
         bindsym semicolon resize grow width 10 px or 10 ppt
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
-        # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -119,8 +112,7 @@ set $fg #c5c8c6
 set $div #c5c8c6
 set $prim #a36ac7
 set $accent #198844
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if availab
+
 bar {
 	position top
         status_command i3blocks
@@ -142,7 +134,7 @@ gaps outer 10
 #border colors (fill unused props with junk, only one needed is border
 client.focused $prim $prim $prim $prim $prim
 #disable borders
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 # open windows on workspace
 assign[class="Firefox"] $ws2
 assign[class="Ripcord"] $ws7
@@ -152,10 +144,10 @@ assign[class="Ahoviewer"] $ws3
 assign[class="Thunar"] $ws9
 assign[class="Liferea"] $ws10
 #autostart
-#exec --no-startup-id compton -b
 exec_always nitrogen --restore &
 exec --no-startup-id nm-applet
 exec --no-startup-id mpd
+exec --no-startup-id compton --backend glx --blur-background --blur-method kawase --blur-strength 3 --vsync opengl -b
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
