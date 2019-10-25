@@ -1,0 +1,42 @@
+#!/bin/sh
+# layoutmgr:
+#  Launches predefined applications in linear order, useful for restoring common
+#  workflow layouts.
+
+# dirty script globals PUKE
+CMD=""
+WS=""
+LAST_WS=""
+STEP=0
+
+# layout file cli arg
+LO=$1
+
+# break file into lines, and remove <> delims
+PARAMS=$(sed "s/<//g; s/>\ /\n/g; s/\(.\)$//" "$LO")
+
+# run a completed command from script state
+run_cmd() {
+   # don't focus desktop again if it was set last command
+   [ ! "$LAST_WS" = "$WS" ] && focus-ws "$WS";
+   # run the command async
+   sh -c "$CMD" & sleep 0.1
+   # save ws
+   LAST_WS="$WS"
+   # reset step
+   CMD=""
+   WS=""
+   STEP=0
+}
+
+while read -r line; do
+   # if 0 step, load line into command
+   [ "$STEP" -eq 0 ] && CMD="${line}"
+   # if 1 step, load workspace into ws, and run the now ready command
+   [ "$STEP" -eq 1 ] && WS="${line}" && run_cmd
+
+   # triggers step change to 1 on first unit iteration
+   [ ! "$CMD" = "" ] && STEP=1
+done <<EOF
+$PARAMS
+EOF

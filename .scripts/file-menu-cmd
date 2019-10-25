@@ -1,0 +1,7 @@
+#!/bin/sh
+# A script to create generic rofi menus of files in a directory, with an arbitrary command to perform on the selected file
+# $1: Directory containing files
+# $2: Command to perform on the selected file
+# $3: (Optional) Menu prompt string
+[ -z "$3" ] && PRMT="Select a File" || PRMT="$3"
+dir-files "$1" | rofi -dmenu -l 15 -p $PRMT | xargs -I {} $2 "$1{}"

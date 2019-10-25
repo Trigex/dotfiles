@@ -1,0 +1,27 @@
+#!/bin/sh
+# wrapper script around xfce screenshooter to manage screencaps
+
+# directory where screencaps are stored
+SCRNCAP_DIR=/home/trigex/Pictures/caps
+# extra flags to pass to screenshooter
+EXTRA_ARGS="-c"
+
+# if no cli arg for cap type was provided, use f as default
+[ -z "$1" ] && CAPTYPE="f" || CAPTYPE=$1
+
+# translate the cap arg to screenshooter flag
+case "$CAPTYPE" in
+    "f") TYPEARG="-f" ;;
+    "r") TYPEARG="-r" ;;
+    "w") TYPEARG="-w" ;;
+esac
+
+# output name and path var
+OUTFILE="$(date +'%Y-%m-%d-%H%M%S').png"
+OUTPATH="$SCRNCAP_DIR/$OUTFILE"
+
+# invoke screenshooter
+xfce4-screenshooter "$TYPEARG" "$EXTRA_ARGS" -s "$OUTPATH"
+
+# output path for other scripts to take advantage of
+printf "%s\n" "$OUTPATH"

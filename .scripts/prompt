@@ -1,0 +1,3 @@
+#!/bin/sh
+# Rofi binary prompt
+[ $(printf '%s\n' 'No' 'Yes' | rofi -dmenu -i -p "$1") = "Yes" ] && $2

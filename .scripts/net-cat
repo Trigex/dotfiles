@@ -1,0 +1,48 @@
+#!/bin/sh
+FACE_BLANK="･_･"
+FACE_CAT="･ω･"
+FACE_SURPRISE="°o°"
+FACE_EPIC="ﾟДﾟ"
+
+G='\033[0;32m'
+R='\033[0;31m'
+B='\033[0;34m'
+BLK='\033[0;30m'
+LG='\033[1;32m'
+N='\033[0m'
+P='\033[0;35m'
+
+[ -p /dev/stdin ] && MSG=$(cat -)
+
+[ -z "$1" ] && [ -z "$MSG" ] && MSG="え？" || MSG=$1
+[ -z "$2" ] && FACE_SEL="cat" || FACE_SEL=$2
+[ -z "$3" ] && C="black" || C=$3
+
+case "$FACE_SEL" in
+    "cat") FCE=$FACE_CAT ;;
+    "blank") FCE=$FACE_BLANK ;;
+    "surprise") FCE=$FACE_SURPRISE ;;
+    "epic") FCE=$FACE_EPIC ;;
+    *) FCE=$FACE_CAT ;;
+esac
+
+case "$C" in
+    "black") C=$BLK ;;
+    "blue") C=$B ;;
+    "green") C=$G ;;
+    "red") C=$R ;;
+    "lgreen") C=$LG ;;
+    "purple") C=$P ;;
+    *) C=$BLK ;;
+esac
+
+clear
+
+echo "   $LGｷﾀ━━━━━━━━(　・∀・）━━━━━━━━!!!!$N"
+echo "$BＶＩＰ$N $RＱＵＡＬＩＴＹ$N $PＩＮＣＯＭＩＮＧ$N\n"
+echo "\t                  ＿＿＿＿＿＿＿＿"
+echo "\t　　  ∧＿∧       /"
+echo "\t    ( 　$FCE)    <  $C$MSG$N"
+echo "\t   (_つ/￣￣￣￣/\\＿＿＿＿＿＿＿＿"
+echo "\t  　＼/    $G🍀$N  /"
+echo "\n"
