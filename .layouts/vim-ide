@@ -1,2 +1,0 @@
-<st-launch 'nvim ~/go/src/github.com/trigex/'> <dev>
-<st-launch 'zsh; cd ~/go/src/github.com/trigex'> <dev>

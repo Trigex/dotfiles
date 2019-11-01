@@ -10,15 +10,14 @@
 ; (￢‿￢ ) - Is it Mormon?
 
 [colors]
-# twochanneru header green
-background = #CCFFCC
+background = #3E4452 
 # border grey
 background-alt = #808080
 # boring black
-foreground = #000000
-foreground-alt = #424242
-# link blue
-primary = #0000FF
+foreground = #ABB2BF   
+foreground-alt = #ABB2BF 
+# link blu
+primary = #61AFEF 
 # red
 secondary = #CC1105
 alert = #CC1105
@@ -32,21 +31,21 @@ offset-y = 6px
 
 background = ${colors.background}
 foreground = ${colors.foreground}
-border-color = ${colors.background-alt}
+border-color = #ABB2BF
 border-size = 1px
 
 padding = 1%
 module-margin = 1px
 
-font-0 = Mona Regular:pixelsize=10:antialias=false;1
-font-1 = Font Awesome 5 Free:pixelsize=11;0
-font-2 = Font Awesome 5 Free Solid:pixelsize=11;0
-font-3 = Font Awesome 5 Brands:pixelsize=11;0
+font-0 = Dejavu Sans:pixelsize=10:style=Book:antialias=true;1
+font-1 = Font Awesome 5 Free:pixelsize=11;1
+font-2 = Font Awesome 5 Free Solid:pixelsize=11;1
+font-3 = Font Awesome 5 Brands:pixelsize=11;1
 font-4 = Noto Sans CJK JP:size=10;0
 
 modules-left = bspwm
 modules-center = mpd
-modules-right = pulseaudio memory cpu date
+modules-right = alsa memory cpu date
 tray-position = right
 
 wm-restack = bspwm
@@ -135,10 +134,55 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
+
 format-volume = <label-volume>
 label-volume =  %percentage%%
+
 label-muted =  Muted
 label-muted-foreground = ${colors.foreground-alt}
+
+[module/alsa]
+type = internal/alsa
+; Soundcard to be used
+; Usually in the format hw:# where # is the card number
+; You can find the different card numbers in `/proc/asound/cards`
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+; Name of the master, speaker and headphone mixers
+; Use the following command to list available mixer controls:
+; $ amixer scontrols | sed -nr "s/.*'([[:alnum:]]+)'.*/\1/p"
+; If master, speaker or headphone-soundcard isn't the default, 
+; use `amixer -c # scontrols` instead where # is the number 
+; of the master, speaker or headphone soundcard respectively
+;
+; Default: Master
+master-mixer = Master
+; Optionally define speaker and headphone mixers
+; Default: none
+; speaker-mixer = Speaker
+; Default: none
+; headphone-mixer = Headphone
+
+; NOTE: This is required if headphone_mixer is defined
+; Use the following command to list available device controls
+; $ amixer controls | sed -r "/CARD/\!d; s/.*=([0-9]+).*name='([^']+)'.*/printf '%3.0f: %s\n' '\1' '\2'/e" | sort
+; You may also need to use `amixer -c # controls` as above for the mixer names
+; Default: none
+#headphone-id = 9
+
+; Use volume mapping (similar to amixer -M and alsamixer), where the increase in volume is linear to the ear
+; Default: false
+mapped = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+label-muted =  Muted
+label-muted-foreground = ${colors.foreground-alt}
+
+format-volume = <label-volume>
+label-volume =  %percentage%%
 
 [global/wm]
 margin-top = 0

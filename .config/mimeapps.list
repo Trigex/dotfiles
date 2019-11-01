@@ -1,0 +1,14 @@
+[Default Applications]
+image/png=nomacs.desktop
+image/jpeg=nomacs.desktop
+image/jpg=nomacs.desktop
+video/H264=mpv.desktop
+text/plain=nvim.desktop
+video/x-matroska=mpv.desktop
+image/gif=nomacs.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+
+[Added Associations]
+image/png=nomacs.desktop;
+image/jpeg=nomacs.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;

@@ -1,3 +1,0 @@
-<st-launch 'ncmpcpp'> <listen>
-<st-launch 'ncmpcpp -s visualizer'> <listen>
-<st-launch 'ncmpcpp -s clock'> <listen>

@@ -1,3 +1,3 @@
 emulate sh
-. ~/.profile
+. $HOME/.profile
 emulate zsh

@@ -3,7 +3,7 @@ configuration {
     show-icons: true;
     icon-theme: "paper";
     font: "Operator Mono 14";
-    theme: "purple";
+    theme: "onedark";
     terminal: "st";
 /*	width: 50;*/
 /*	lines: 15;*/

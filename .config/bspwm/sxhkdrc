@@ -10,15 +10,20 @@ super + Return
 super + d
 	rofi -show drun
 
-# screenshots
-Print
-	scrncapmgr f
+#Print
+#    scrncapmgr f &
 
-ctrl + Print
-	scrncapmgr r
+super + shift + s
+     scrncapmgr r u &
 
-shift + Print
-	scrncapmgr w
+#Print + ctrl
+#    scrncapmgr r &
+
+#Print + ctrl + z
+#    scrncapmgr r u &
+
+#Print + shift + {_,z}
+#    scrncapmgr w {s,u} &
 
 # pcmanfm
 super + e
@@ -35,6 +40,10 @@ super + n
 # newsboat
 super + r
 	focus-ws work && st-launch 'newsboat' &
+
+# weechat
+super + i
+	focus-ws chat && launch-weechat &	
 
 # Pavucontrol
 super + p

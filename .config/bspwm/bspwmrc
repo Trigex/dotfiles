@@ -12,15 +12,15 @@
 # keybinds
 sxhkd -c ~/.config/bspwm/sxhkdrc -m 1 &
 # compositor
-compton --config ~/.config/compton.conf --respect-prop-shadow &
+#compton --config ~/.config/compton.conf --respect-prop-shadow &
 # wallpaper
 nitrogen --restore &
 # panel
 $HOME/.config/polybar/launch.sh &
-# ime
-fcitx -d &
 # mpd
 mpd &
+# notifs
+dunst &
 
 # === WORKSPACES ===
 bspc monitor -d term www chat dev play watch listen work
@@ -44,6 +44,7 @@ bspc config split_ratio          0.50
 bspc rule --add Firefox			    desktop='www' follow=on
 # dev
 bspc rule --add jetbrains-goland    	    desktop='dev' follow=on
+bspc rule --add Code			    desktop='dev' follow=on
 # chat
 bspc rule --add discord			    desktop='chat'
 # play
@@ -57,8 +58,6 @@ bspc rule --add Surf                	    desktop='work' follow=on
 bspc rule --add Zathura             	    desktop='work' follow=on state=tiled
 # listen
 bspc rule --add Pavucontrol		    desktop='listen' follow=on
-# others
-bspc rule --add Macopix             	    state=floating
 
 # === COLORS ===
 bspc config normal_border_color		"#424242"

@@ -1,2 +1,0 @@
-<st-launch 'SRC="$(head -1 ~/Documents/school/.latest)"; nvim "$SRC"'> <work>
-<st-launch 'OUT="$(head -2 ~/Documents/school/.latest)"; nvim "$OUT"'> <work>

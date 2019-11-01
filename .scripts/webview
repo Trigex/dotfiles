@@ -1,0 +1,15 @@
+#!/bin/sh
+EXT="${1##*.}"
+MPV_TYPES="mp4 webm"
+IMG_TYPES="png jpg jpeg jpe webp gif tiff"
+WGET_TYPES="mp3 flac opus pdf zip tar.gz"
+
+if echo $IMG_TYPES | grep -w $EXT > /dev/null; then
+    nohup wget "$1" && nomacs "$1" &
+elif echo $MPV_TYPES | grep -w $EXT > /dev/null; then
+    nohup mpv --loop --quiet "$1" > /dev/null &
+elif echo $WGET_TYPES | grep -w $EXT > /dev/null; then
+    nohup wget "$1" >/dev/null &
+else
+    nohup $BROWSER "$1" >/dev/null &
+fi

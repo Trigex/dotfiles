@@ -5,6 +5,7 @@
 SCRNCAP_DIR=/home/trigex/Pictures/caps
 # extra flags to pass to screenshooter
 EXTRA_ARGS="-c"
+UP_SITE="http://0x0.st"
 
 # if no cli arg for cap type was provided, use f as default
 [ -z "$1" ] && CAPTYPE="f" || CAPTYPE=$1
@@ -23,5 +24,5 @@ OUTPATH="$SCRNCAP_DIR/$OUTFILE"
 # invoke screenshooter
 xfce4-screenshooter "$TYPEARG" "$EXTRA_ARGS" -s "$OUTPATH"
 
-# output path for other scripts to take advantage of
-printf "%s\n" "$OUTPATH"
+# if 2 is set, and equal to "u", upload the captured image, then copy the url to the clipboard
+[ "$2" = "u" ] && curl -F"file=@$OUTPATH" $UP_SITE | xclip -selection c && notify-send 'Image uploaded!' "The URL was copied to your clipboard!" --icon=dialog-information

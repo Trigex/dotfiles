@@ -19,24 +19,20 @@ export XDG_CURRENT_DESKTOP="bspwm"
 export SHELL="zsh"
 export PAGER="less"
 export EDITOR="nvim"
+export VISUAL="nvim"
 export TERMINAL="st"
-export BROWSER="firefox"
-export ALTBROWSER="surf"
+export PLAYER="mpv"
+export BROWSER="chromium"
 export READER="zathura"
-# Japanese input
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export GTK_IM_MODULE=fcitx
 # go and my shell scripts; all in the world I need
 export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"
-export PATH="$PATH:$HOME/.scripts:$GOBIN:/opt/GoLand-2019.2.3/bin"
-# wine
-export WINEARCH=win32
-export WINEPREFIX="$HOME/.win32"
-export WINEDLLOVERRIDES=mscoree=d;mshtml=d
-# gtk
-export GTK_THEME=Materia-dark
-export NO_AT_BRIDGE=1
+export GO111MODULE=auto
+export PATH="$PATH:$HOME/.scripts:$GOBIN:$HOME/.dotnet"
+# fuck you botnet
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export DOTNET_ROOT=$HOME/.dotnet
 # DEWM
 export DOOMWADDIR=$HOME/Games/DOOM_WADS/IWADS
+# weechat
+export WEECHAT_HOME=$HOME/.config/weechat
