@@ -1,3 +1,0 @@
-#!/bin/sh
-# Launch the given command parameter in st
-[ -n "$1" ] && st zsh -c "$1; sh"

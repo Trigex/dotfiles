@@ -1,0 +1,393 @@
+The system is: FreeBSD - 12.1-RELEASE-p1 - amd64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: -O2;-pipe;-fno-strict-aliasing;-fstack-protector-strong
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Clang, found in "/usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/3.15.5/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_1acbb && [1/2] Building C object CMakeFiles/cmTC_1acbb.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_1acbb
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_25f6a && [1/2] Building C object CMakeFiles/cmTC_25f6a.dir/CMakeCCompilerABI.c.o
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+Target: x86_64-unknown-freebsd12.1
+Thread model: posix
+InstalledDir: /usr/bin
+ "/usr/bin/cc" -cc1 -triple x86_64-unknown-freebsd12.1 -emit-obj -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_25f6a.dir/CMakeCCompilerABI.c.gcno -resource-dir /usr/lib/clang/8.0.1 -O2 -fdebug-compilation-dir /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 2 -fobjc-runtime=gnustep -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/cmTC_25f6a.dir/CMakeCCompilerABI.c.o -x c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-freebsd12.1
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/clang/8.0.1/include
+ /usr/include
+End of search list.
+[2/2] Linking C executable cmTC_25f6a
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+Target: x86_64-unknown-freebsd12.1
+Thread model: posix
+InstalledDir: /usr/bin
+ "/usr/bin/ld" --eh-frame-hdr -dynamic-linker /libexec/ld-elf.so.1 --hash-style=both --enable-new-dtags -o cmTC_25f6a /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/crtbegin.o -L/usr/lib CMakeFiles/cmTC_25f6a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/crtend.o /usr/lib/crtn.o
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/lib/clang/8.0.1/include]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/lib/clang/8.0.1/include] ==> [/usr/lib/clang/8.0.1/include]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/lib/clang/8.0.1/include;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/local/bin/ninja cmTC_25f6a && [1/2] Building C object CMakeFiles/cmTC_25f6a.dir/CMakeCCompilerABI.c.o]
+  ignore line: [FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)]
+  ignore line: [Target: x86_64-unknown-freebsd12.1]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/bin]
+  ignore line: [ "/usr/bin/cc" -cc1 -triple x86_64-unknown-freebsd12.1 -emit-obj -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_25f6a.dir/CMakeCCompilerABI.c.gcno -resource-dir /usr/lib/clang/8.0.1 -O2 -fdebug-compilation-dir /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 2 -fobjc-runtime=gnustep -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/cmTC_25f6a.dir/CMakeCCompilerABI.c.o -x c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c -faddrsig]
+  ignore line: [clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-freebsd12.1]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/clang/8.0.1/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking C executable cmTC_25f6a]
+  ignore line: [FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)]
+  ignore line: [Target: x86_64-unknown-freebsd12.1]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/bin]
+  link line: [ "/usr/bin/ld" --eh-frame-hdr -dynamic-linker /libexec/ld-elf.so.1 --hash-style=both --enable-new-dtags -o cmTC_25f6a /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/crtbegin.o -L/usr/lib CMakeFiles/cmTC_25f6a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/crtend.o /usr/lib/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/libexec/ld-elf.so.1] ==> ignore
+    arg [--hash-style=both] ==> ignore
+    arg [--enable-new-dtags] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_25f6a] ==> ignore
+    arg [/usr/lib/crt1.o] ==> ignore
+    arg [/usr/lib/crti.o] ==> ignore
+    arg [/usr/lib/crtbegin.o] ==> ignore
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_25f6a.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/crtend.o] ==> ignore
+    arg [/usr/lib/crtn.o] ==> ignore
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib]
+  implicit fwks: []
+
+
+Determining if files dlfcn.h;stdint.h;stddef.h;inttypes.h;stdlib.h;strings.h;string.h;float.h exist passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_3161e && [1/2] Building C object CMakeFiles/cmTC_3161e.dir/StandardHeadersExist.c.o
+[2/2] Linking C executable cmTC_3161e
+
+
+
+Performing C SOURCE FILE Test memchrExists succeeded with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_b1cf3 && [1/2] Building C object CMakeFiles/cmTC_b1cf3.dir/src.c.o
+[2/2] Linking C executable cmTC_b1cf3
+
+
+Source file was:
+
+#include <string.h>
+
+int main()
+{
+#ifndef memchr
+   int i = sizeof(&memchr);
+#endif
+  return 0;
+}
+
+Performing C SOURCE FILE Test freeExists succeeded with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_ce0cc && [1/2] Building C object CMakeFiles/cmTC_ce0cc.dir/src.c.o
+[2/2] Linking C executable cmTC_ce0cc
+
+
+Source file was:
+
+#include <stdlib.h>
+
+int main()
+{
+#ifndef free
+   int i = sizeof(&free);
+#endif
+  return 0;
+}
+
+Determining if files unistd.h exist passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_8f4ab && [1/2] Building C object CMakeFiles/cmTC_8f4ab.dir/HAVE_UNISTD_H.c.o
+[2/2] Linking C executable cmTC_8f4ab
+
+
+
+Determining if the DIR symbol is defined as in AC_HEADER_DIRENT passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_274bd && [1/2] Building C object CMakeFiles/cmTC_274bd.dir/CheckDIRSymbolExists.c.o
+[2/2] Linking C executable cmTC_274bd
+
+
+File /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp/CheckDIRSymbolExists.c:
+/* */
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <dirent.h>
+
+int main()
+{if ((DIR *) 0) return 0;}
+
+Determining if the include file stdio.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_70d25 && [1/2] Building C object CMakeFiles/cmTC_70d25.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_70d25
+
+
+
+Determining if the include file math.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_c360d && [1/2] Building C object CMakeFiles/cmTC_c360d.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_c360d
+
+
+
+Determining if the include file errno.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_b9eff && [1/2] Building C object CMakeFiles/cmTC_b9eff.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_b9eff
+
+
+
+Determining if the include file stdarg.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_60f58 && [1/2] Building C object CMakeFiles/cmTC_60f58.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_60f58
+
+
+
+Determining if the include file memory.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_a973f && [1/2] Building C object CMakeFiles/cmTC_a973f.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_a973f
+
+
+
+Determining if the include file sys/mman.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_d57bf && [1/2] Building C object CMakeFiles/cmTC_d57bf.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_d57bf
+
+
+
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_c4770 && [1/2] Building C object CMakeFiles/cmTC_c4770.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_c4770
+
+
+
+Determining if the include file sys/ioctl.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_00934 && [1/2] Building C object CMakeFiles/cmTC_00934.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_00934
+
+
+
+Determining if the include file fcntl.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_552c7 && [1/2] Building C object CMakeFiles/cmTC_552c7.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_552c7
+
+
+
+Determining if the include file sys/socket.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_d4b91 && [1/2] Building C object CMakeFiles/cmTC_d4b91.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_d4b91
+
+
+
+Determining if the include file netinet/in.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_3fb34 && [1/2] Building C object CMakeFiles/cmTC_3fb34.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_3fb34
+
+
+
+Determining if the include file netinet/tcp.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_75068 && [1/2] Building C object CMakeFiles/cmTC_75068.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_75068
+
+
+
+Determining if the include file arpa/inet.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_bf302 && [1/2] Building C object CMakeFiles/cmTC_bf302.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_bf302
+
+
+
+Determining if the include file limits.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_27f2d && [1/2] Building C object CMakeFiles/cmTC_27f2d.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_27f2d
+
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_d2858 && [1/2] Building C object CMakeFiles/cmTC_d2858.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_d2858
+
+
+
+Determining if the include file signal.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_99aa1 && [1/2] Building C object CMakeFiles/cmTC_99aa1.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_99aa1
+
+
+
+Determining if the include file getopt.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_536c2 && [1/2] Building C object CMakeFiles/cmTC_536c2.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_536c2
+
+
+
+Performing C SOURCE FILE Test _have_inline succeeded with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_6c8dc && [1/2] Building C object CMakeFiles/cmTC_6c8dc.dir/src.c.o
+[2/2] Linking C executable cmTC_6c8dc
+
+
+Source file was:
+typedef int foo_t;
+             static TESTKEYWORD foo_t static_foo(){return 0;}
+             foo_t foo(){return 0;}
+             int main(int argc, char *argv[]){return 0;}
+Performing C SOURCE FILE Test _have_vla succeeded with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_476b9 && [1/2] Building C object CMakeFiles/cmTC_476b9.dir/src.c.o
+[2/2] Linking C executable cmTC_476b9
+
+
+Source file was:
+int main(int argc, char *argv[]){int arr[argc]; return 0;}
+Determining size of unsigned short passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_02f9f && [1/2] Building C object CMakeFiles/cmTC_02f9f.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+[2/2] Linking C executable cmTC_02f9f
+
+
+
+Determining if the system is big endian passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_18e76 && [1/2] Building C object CMakeFiles/cmTC_18e76.dir/TestEndianess.c.o
+[2/2] Linking C executable cmTC_18e76
+
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_93316 && [1/2] Building C object CMakeFiles/cmTC_93316.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_93316
+
+
+
+Determining if the function inet_ntop exists passed with the following output:
+Change Dir: /usr/home/trigex/.config/dwm/fluidsynth/work/.build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/local/bin/ninja cmTC_c5606 && [1/2] Building C object CMakeFiles/cmTC_c5606.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_c5606
+
+
+

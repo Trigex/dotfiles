@@ -1,0 +1,1 @@
+On my BSD systems place at /usr/local/scripts

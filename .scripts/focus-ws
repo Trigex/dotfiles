@@ -1,3 +1,0 @@
-#!/bin/sh
-# Focus the given bspwm workspace
-bspc desktop -f "$1"

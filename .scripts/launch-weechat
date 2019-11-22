@@ -1,2 +1,0 @@
-#!/bin/sh
-[ "$(/bin/ls -A /run/screens/S-trigex)" ] && st-launch "screen -rd" || st-launch "screen weechat"
