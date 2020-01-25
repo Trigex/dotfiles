@@ -1,9 +1,0 @@
-#!/bin/sh
-# bspwm power menu
-OPTIONS="Log out\nPower off\nReboot"
-PICK=$(printf "$OPTIONS" | rofi -dmenu -i)
-case "$PICK" in
-    "Log out") bspc quit ;;
-    "Power off") sudo poweroff ;;
-    "Reboot") sudo reboot ;;
-esac

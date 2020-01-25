@@ -1,5 +1,0 @@
-#!/bin/sh
-# $1: Path to directory to get filename contents of
-# TODO: Tweak this to utilize sed for path filtering instead of find's basename, as it's speed isn't optimal
-[ -z "$1" ] && exit
-find "$1" -mindepth 1 -maxdepth 1 -type f -execdir basename {} ';'

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=The comfiest place to lounge!
+Exec=~/.local/bin/thelounge
+Icon=~/.icons/default/logo-vertical-transparent-bg.svg
+Categories=Chat;IRC;Instant Messaging;
+Name=The Lounge
+StartupNotify=false
+Terminal=false
+Type=Application

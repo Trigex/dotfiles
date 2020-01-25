@@ -10,20 +10,22 @@
 ; (￢‿￢ ) - Is it Mormon?
 
 [colors]
-background = #3E4452 
-# border grey
-background-alt = #808080
-# boring black
-foreground = #ABB2BF   
-foreground-alt = #ABB2BF 
-# link blu
-primary = #61AFEF 
-# red
+; background color
+background = #2E3440
+; border color
+background-alt = #4C566A
+; text color
+foreground = #D8DEE9
+; icon color
+foreground-alt = #3b4252
+; link blu
+primary = #81A1C1
+; red
 secondary = #CC1105
 alert = #CC1105
 
 [bar/bspwm-bar]
-# (1920 - 7)-7
+; (1920 - 7) - 7 = 1906
 width = 1906px
 height = 28px
 offset-x = 7px
@@ -31,21 +33,23 @@ offset-y = 6px
 
 background = ${colors.background}
 foreground = ${colors.foreground}
-border-color = #ABB2BF
+border-color = ${colors.background-alt}
 border-size = 1px
 
 padding = 1%
 module-margin = 1px
 
-font-0 = Dejavu Sans:pixelsize=10:style=Book:antialias=true;1
+font-0 = fxd:pixelsize=10;1
 font-1 = Font Awesome 5 Free:pixelsize=11;1
 font-2 = Font Awesome 5 Free Solid:pixelsize=11;1
 font-3 = Font Awesome 5 Brands:pixelsize=11;1
-font-4 = Noto Sans CJK JP:size=10;0
+font-4 = JackeyFont,じゃっきーふぉんと:style=Regular:antialiasing=off:size=9;1
+font-5 = Twitter Color Emoji:style=Regular:size=11;1
 
 modules-left = bspwm
 modules-center = mpd
-modules-right = alsa memory cpu date
+; TODO: Create CPU usage, memory, and stopwatch modules
+modules-right = date
 tray-position = right
 
 wm-restack = bspwm
@@ -56,9 +60,7 @@ cursor-scroll = ns-resize
 type = internal/bspwm
 padding = 0px
 margin = 1px
-
 format = <label-state>
-
 label-focused = %icon%
 label-focused-foreground = ${colors.primary}
 label-focused-padding = ${self.padding}
@@ -79,30 +81,24 @@ label-urgent-padding = ${self.padding}
 label-urgent-margin = ${self.margin}
 label-urgent-foreground = ${colors.secondary}
 
-;bspwm icons
 ws-icon-0 = term; 
 ws-icon-1 = www; 
 ws-icon-2 = chat; 
-ws-icon-3 = dev; 
-ws-icon-4 = play; 
-ws-icon-5 = watch; 
-ws-icon-6 = listen; 
-ws-icon-7 = work; 
-
-[module/xkeyboard]
-type = internal/xkeyboard
-format-prefix = " " 
-format-prefix-foreground = ${colors.foreground}
-format-prefix-margin-left = 1px
-label-layout = %layout%
+ws-icon-3 = emacs;
+ws-icon-4 = watch;
+ws-icon-5 = listen;
+ws-icon-6 = misc;
 
 [module/mpd]
 type = internal/mpd
-format-playing-prefix = "♪ヽ(^^ヽ)♪  "
-format-paused-prefix = "( `ε´ )  "
-format-stopped =  ┐(￣∀￣)┌
+host =
+port =
+password =
 format-online = <label-song> | <label-time> | (<icon-prev> <icon-stop> <toggle> <icon-next>)
-label-offline = <(￣︶￣)>
+format-stopped =
+label-offline =
+
+label-song =  %album% - %title%
 icon-prev = 
 icon-stop = 
 icon-play = 
@@ -111,19 +107,6 @@ icon-next = 
 label-song-maxlen = 100
 label-song-ellipsis = true
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = ""
-format-prefix-margin-left = 1.2px
-label = %percentage:  2%%
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = " "
-label = %percentage_used%%
-
 [module/date]
 type = internal/date
 interval = 5
@@ -131,58 +114,6 @@ date = " %Y-%m-%d"
 time = %I:%M %p
 format-prefix =  
 label = %date% %time%
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume = <label-volume>
-label-volume =  %percentage%%
-
-label-muted =  Muted
-label-muted-foreground = ${colors.foreground-alt}
-
-[module/alsa]
-type = internal/alsa
-; Soundcard to be used
-; Usually in the format hw:# where # is the card number
-; You can find the different card numbers in `/proc/asound/cards`
-master-soundcard = default
-speaker-soundcard = default
-headphone-soundcard = default
-; Name of the master, speaker and headphone mixers
-; Use the following command to list available mixer controls:
-; $ amixer scontrols | sed -nr "s/.*'([[:alnum:]]+)'.*/\1/p"
-; If master, speaker or headphone-soundcard isn't the default, 
-; use `amixer -c # scontrols` instead where # is the number 
-; of the master, speaker or headphone soundcard respectively
-;
-; Default: Master
-master-mixer = Master
-; Optionally define speaker and headphone mixers
-; Default: none
-; speaker-mixer = Speaker
-; Default: none
-; headphone-mixer = Headphone
-
-; NOTE: This is required if headphone_mixer is defined
-; Use the following command to list available device controls
-; $ amixer controls | sed -r "/CARD/\!d; s/.*=([0-9]+).*name='([^']+)'.*/printf '%3.0f: %s\n' '\1' '\2'/e" | sort
-; You may also need to use `amixer -c # controls` as above for the mixer names
-; Default: none
-#headphone-id = 9
-
-; Use volume mapping (similar to amixer -M and alsamixer), where the increase in volume is linear to the ear
-; Default: false
-mapped = true
-
-; Interval for volume increase/decrease (in percent points)
-; Default: 5
-interval = 5
-label-muted =  Muted
-label-muted-foreground = ${colors.foreground-alt}
-
-format-volume = <label-volume>
-label-volume =  %percentage%%
 
 [global/wm]
 margin-top = 0

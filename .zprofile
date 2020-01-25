@@ -1,3 +1,2 @@
-emulate sh
-. /home/trigex/.profile
-emulate zsh
+# start gpg agent here later
+
