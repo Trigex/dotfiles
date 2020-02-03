@@ -22,14 +22,13 @@ start_polybar() {
 }
 
 start_polybar &
-nitrogen --restore &
+
+# max volume on session restarts
+mixer vol +100
+sxhkd &
 dunst &
-picom &
-# application autostarts
-emacs &
-thelounge &
-transmission-gtk &
-cantata &
+nitrogen --restore &
+#~/.local/bin/startbar &
 
 # workspaces
 bspc monitor -d "$WS1" "$WS2" "$WS3" "$WS4" "$WS5" "$WS6" "$WS7"
@@ -38,15 +37,9 @@ bspc monitor -d "$WS1" "$WS2" "$WS3" "$WS4" "$WS5" "$WS6" "$WS7"
 bspc config border_width 2
 bspc config window_gap 10
 bspc config split_ratio 0.50
-bspc config normal_border_color "$NORMAL_COLOR"
-bspc config active_border_color "$ACTIVE_COLOR"
-bspc config urgent_border_color "$URGENT_COLOR"
 
 # window rules
-bspc rule -a Firefox desktop="$WS2" follow=on
+bspc rule -a Chromium-browser desktop="$WS2" follow=on
 bspc rule -a Gimp state=floating follow=on
-bspc rule -a mpv desktop="$WS5" follow=on
-bspc rule -a cantata desktop="$WS6"
-bspc rule -a Surf desktop="$WS3"
-bspc rule -a '*:emacs' desktop="$WS4"
-bspc rule -a Transmission-gtk desktop="$WS7"
+#bspc rule -a mpv desktop="$WS5" follow=on
+bspc rule -a '*:emacs' desktop="$WS4" follow=on

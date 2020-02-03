@@ -2,38 +2,39 @@
 super + Return
 	alacritty
 
-# file browser
+# emacs :`)
 super + e
-	pcmanfm
+	emacs
 
-# screen locker
-ctrl + alt + l
-	i3lock
+# pcmanfm
+super + p
+	pcmanfm
 
 # program launcher
 super + d
 	rofi -show drun -show-icons
 
-# screenshot scripts
+ctrl + alt + l
+	xlock &
+
 ctrl + Print
-	scap-region-and-clip &
+	scapmgr -f -s
 
 ctrl + alt + Print
-	scap-region-and-upload &
-
-shift + Print
-	scap-region-and-save &
-
-# kaomoji copy
-super + i
-	splatmoji copy ~/.scripts/splatmoji/data/emoticons.tsv
-
-super + alt + i
-	splatmoji type ~/.scripts/splatmoji/data/emoticons.tsv
+	scapmgr -r -s
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# volume keys
+XF86AudioMute
+		mixerctl -t outputs.master.mute
+XF86AudioRaiseVolume
+		mixerctl outputs.master=+20
+XF86AudioLowerVolume</code>
+		mixerctl outputs.master=-20
+
 
 #
 # bspwm hotkeys

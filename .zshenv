@@ -1,11 +1,10 @@
-# software preferences
-export BROWSER=firefox
+export POUDRIERE_JAIL="fbsd-12-1-amd64"
 export EDITOR=emacs
+export PAGER=/usr/local/bin/moar
+export BROWSER=chrome
 
-# golang
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
 export GO111MODULE=on
+export GOPATH="$HOME/go"
+export GOBIN="$HOME/go/bin"
 
-# path
-export PATH="$PATH:$GOBIN:$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.yarn/bin"
+export PATH="$PATH:$HOME/.local/bin:$GOBIN:$HOME/.emacs.d/bin"

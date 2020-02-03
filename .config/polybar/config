@@ -47,7 +47,8 @@ font-4 = JackeyFont,じゃっきーふぉんと:style=Regular:antialiasing=off:s
 font-5 = Twitter Color Emoji:style=Regular:size=11;1
 
 modules-left = bspwm
-modules-center = mpd
+modules-center = 
+; mpd
 ; TODO: Create CPU usage, memory, and stopwatch modules
 modules-right = date
 tray-position = right
