@@ -1,0 +1,3 @@
+#!/bin/sh
+VOL="$(mixer vol | awk '{print $7}' | cut -f1 -d":")"
+[ "$VOL" = "0" ] && dunstify "Volume is muted" || dunstify "Volume is $VOL"

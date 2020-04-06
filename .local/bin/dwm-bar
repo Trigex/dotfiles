@@ -1,0 +1,20 @@
+#!/bin/sh
+
+DELIM="|"
+
+time() {
+	echo "$(date +"%m-%d-%y") $(date +"%r")"
+}
+
+volume() {
+	echo "$(mixer vol | awk '{print $7}' | cut -f1 -d":")% VOL"
+}
+
+status() {
+	echo " [ $(volume) $DELIM $(time) ]"
+} 
+
+while :; do
+	xsetroot -name "$(status | tr '\n' ' ')"
+	sleep 10
+done

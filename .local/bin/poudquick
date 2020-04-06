@@ -1,0 +1,10 @@
+#!/bin/sh
+# A little script intended to make single-port poudriere builds faster to do.
+BUILD_JAIL="freebsd_12-1x64"
+PORT_LIST=/usr/local/etc/poudriere.d/port-list
+# Configure, build, update pkg repo and install
+doas poudriere options -j "$BUILD_JAIL" "$1" && doas poudriere bulk -j "$BUILD_JAIL" "$1" && doas pkg update && doas pkg install -y "$1"
+# Append the port to the port-list so it'll get updated in subsuquent bulk builds and such
+echo "$1" | doas tee -a $PORT_LIST
+# notif
+dunstify "$1 has been installed!"

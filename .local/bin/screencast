@@ -1,0 +1,5 @@
+#!/bin/sh
+SIZE="1920x1080"
+FRAMERATE="30"
+OUTPUT="$1"
+ffmpeg -video_size "$SIZE" -framerate "$FRAMERATE" -f x11grab -i :0.0+0,0 "$1"

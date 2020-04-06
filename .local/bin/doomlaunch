@@ -1,0 +1,29 @@
+#!/bin/sh
+# Epic Doom launcher script
+
+# Base wad directory
+WADDIR="$HOME/.local/games/wads"
+# Directory which stores internal wads
+IWADDIR="$WADDIR/iwads"
+# Directory which stores patch wads
+PWADDIR="$WADDIR/pwads"
+# List of source ports seperated by \n
+SOURCEPORTS="prboom-plus\ngzdoom"
+
+# Select source port
+SOURCEPORT="$(printf $SOURCEPORTS | dmenu -p "Select a source port: ")"
+
+# Select iwad
+IWAD="$IWADDIR/$(ls $IWADDIR | dmenu -p "Select an IWAD: ")"
+# Blank pwad default incase the user isn't playing with any
+PWAD=""
+
+# Loop selecting pwads, so users can load up multiple if they please
+while [ "$(printf "Yes\nNo" | dmenu -p "Would you like to select a PWAD?")" = "Yes" ]
+do
+	SEL="$PWADDIR/$(ls $PWADDIR | dmenu -p "Select a PWAD: ")"
+	[ "$PWAD" = "" ] && PWAD="$SEL" || PWAD="$PWAD $SEL"
+done
+
+# Launch game
+[ "$PWAD" = "" ] && $SOURCEPORT -iwad "$IWAD" || $SOURCEPORT -iwad "$IWAD" -file "$PWAD"
